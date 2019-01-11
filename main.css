@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  } 
+
 html {
     box-sizing: border-box;
+    font-family: Product Sans;
 }
 
 *, *:before, *:after {
@@ -12,7 +20,7 @@ body {
     display: flex;
     background: #7a419b;
     min-height: 100vh;
-    background: linear-gradient(135deg, #7c1599 0%, #911099 48%, #7e4ae8 100%);
+    background: linear-gradient(135deg, #ffd54f 0%, #ffb300 48%, #ff6f00 100%);
     background-size: cover;
     align-items: center;
     justify-content: center;
