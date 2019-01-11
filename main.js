@@ -18,14 +18,14 @@ function handleRangeUpdate() {video[this.name] = this.value;};
 let scrub = (e) => video.currentTime = (e.offsetX / progress.offsetWidth) * video.duration;
 
 function toggleFullScreen() {
-    if(!isFullScreen){
-        video.requestFullscreen();
-    isFullScreen = !isFullScreen;
+    if (!player.fullscreenElement) {
+        document.player.requestFullscreen();
     } else {
-        video.exitFullscreen;
-        isFullScreen = !isFullScreen;
+      if (player.exitFullscreen) {
+        player.exitFullscreen(); 
+      }
     }
-}
+  }
 
 function handleProgress() {
     const percent = (video.currentTime/video.duration) * 100;
