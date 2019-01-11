@@ -19,7 +19,7 @@ let scrub = (e) => video.currentTime = (e.offsetX / progress.offsetWidth) * vide
 
 function toggleFullScreen() {
     if (!player.fullscreenElement) {
-        document.player.requestFullscreen();
+        player.requestFullscreen();
     } else {
       if (player.exitFullscreen) {
         player.exitFullscreen(); 
@@ -46,4 +46,4 @@ progress.addEventListener('click', scrub);
 progress.addEventListener('mousemove', (e) => mouseDown && scrub(e)); 
 progress.addEventListener('mousedown', () => mouseDown = true);
 progress.addEventListener('mouseup', () => mouseDown = false);
-fullScreen.addEventListener('click', toggleFullScreen)
+fullScreen.addEventListener('click', toggleFullScreen);
